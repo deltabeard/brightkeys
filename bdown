@@ -1,0 +1,5 @@
+#!/bin/bash
+
+brightness=$(cat /sys/class/backlight/nv_backlight/brightness)
+brightness=$(($brightness-5))
+tee /sys/class/backlight/nv_backlight/brightness <<< $brightness
